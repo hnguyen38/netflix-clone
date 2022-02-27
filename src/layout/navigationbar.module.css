@@ -1,0 +1,62 @@
+.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    margin-left: 200px;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13.5px;
+    height: 80px;
+    font-weight: bold;
+    
+  }
+
+li {
+   color: white;
+   margin-top: 25px;
+   margin-right: 18px;
+}
+
+
+a, a:visited, a:active {
+   text-decoration: none;
+   color: rgb(202, 200, 200);
+}
+
+a:focus {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    width: 135px;
+    height: 56px;
+    position: fixed;
+    border: black;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.background {
+   display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 67px;
+}
+
+.right {
+    margin-left: auto;
+    align-items: space-between;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: bold;
+    color: rgb(202, 200, 200);
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+/*CHANGE THIS LATER WHEN ADD COMPONENTS */
+span {
+    margin-left: 18px;
+}
+
