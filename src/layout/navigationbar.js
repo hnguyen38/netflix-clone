@@ -4,7 +4,7 @@ import classes from "./navigationbar.module.css";
 
 function NavigationBar() {
   return (
-    <div className={classes.background}>
+    <div className={classes.container}>
       <div>
         <span>
           <img src={logo} alt="Netflix" className={classes.logo} />
@@ -27,7 +27,7 @@ function NavigationBar() {
           </li>
         </ul>
       </div>
-      <div className={classes.right}> 
+      <div className={classes.right}>
         <span>Search bar</span>
         <span>User Account</span>
       </div>

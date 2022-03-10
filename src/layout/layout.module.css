@@ -1,5 +1,13 @@
 .layout {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(7, 7, 7);
+  height: 100%;
+  width: 100%;
+  background-color: rgb(7, 7, 7);
+}
+
+.main {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 100px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(7, 7, 7);
 }
