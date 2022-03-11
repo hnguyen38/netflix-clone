@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../images/netflix.jpg";
 import classes from "./navigationbar.module.css";
+import logo from "../images/netflixlogo";
 
 function NavigationBar() {
   return (

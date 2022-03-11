@@ -31,16 +31,14 @@ a:focus {
 
 .logo {
   width: 135px;
-  height: 56px;
+  height: 25px;
   position: fixed;
-  border: black;
-  margin-left: 20px;
-  margin-top: 7px;
+  margin-left: 10px;
+  margin-top: 24px;
 }
-
+/* add some background color here */
 .container {
   display: flex;
-  background-color: rgb(0, 0, 0);
   height: 67px;
   position: fixed;
   width: 100vw;

@@ -2,7 +2,7 @@ import classes from "./Rows.module.css";
 import axios from "../sources/axios";
 import { useState, useEffect } from "react";
 
-const base_URL = "https://image.tmdb.org/t/p/original/";
+const base_URL = "https://image.tmdb.org/t/p/original";
 
 function Rows({ title, fetchURL }) {
   const [movies, setMovies] = useState([]);
