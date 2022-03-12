@@ -1,0 +1,9 @@
+#info {
+  background-color: rgba(82, 82, 82, 0.726);
+  color: white;
+}
+
+#info:hover {
+  cursor: pointer;
+  background-color: rgba(153, 153, 153, 0.733);
+}

@@ -6,7 +6,15 @@ const base_URL = "https://image.tmdb.org/t/p/original";
 
 function Rows({ title, fetchURL }) {
   const [movies, setMovies] = useState([]);
+  const [arrows, setArrow] = useState(false);
 
+  function rightArrow() {
+    window.scrollTo({
+      right: 100,
+      behavior: "smooth",
+    });
+  }
+  window.addEventListener("click", rightArrow);
   //if any variable is being passed from outside block (fetchURL) you HAVE TO put it as a dependency bc function is now dependent on fetchURL
   //URL may change so useEffect will run again DEPENDING on fetchURL (?)
   useEffect(() => {
@@ -30,6 +38,10 @@ function Rows({ title, fetchURL }) {
             alt={movie.name}
           />
         ))}
+      </div>
+      <div className={classes.button}>
+        <button className={classes.left}>{`<`}</button>
+        <button className={classes.right} onClick={rightArrow}>{`>`}</button>
       </div>
     </div>
   );

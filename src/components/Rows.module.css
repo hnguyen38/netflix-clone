@@ -1,12 +1,16 @@
 .title {
   color: white;
   margin-top: 15px;
-  padding-left: 40px;
+  padding-left: 60px;
   margin-bottom: -10px;
+  font-size: 1.5vw;
+  color: rgb(238, 238, 238);
 }
 
 .container {
   color: white;
+  position: relative;
+  z-index: 3;
 }
 
 .moviesRow {
@@ -15,7 +19,7 @@
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .moviesRow::-webkit-scrollbar {
@@ -33,4 +37,32 @@
 
 .image:hover {
   transform: scale(1.08);
+}
+
+.button {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 250px;
+  z-index: 5;
+  margin-top: -270px;
+}
+
+.right,
+.left {
+  width: 50px;
+  font-family: "DM Sans", sans-serif;
+  color: rgba(8, 8, 8, 0);
+  font-size: 50px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.right:hover,
+.left:hover {
+  background: rgba(0, 0, 0, 0.205);
+  color: white;
+  cursor: pointer;
 }

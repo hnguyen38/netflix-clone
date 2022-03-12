@@ -5,7 +5,7 @@
   text-decoration: none;
   margin-left: 200px;
   display: flex;
-  font-family: "Open Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 13.5px;
   height: 80px;
   font-weight: bold;
@@ -33,7 +33,7 @@ a:focus {
   width: 135px;
   height: 25px;
   position: fixed;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 24px;
 }
 /* add some background color here */
@@ -42,6 +42,23 @@ a:focus {
   height: 67px;
   position: fixed;
   width: 100vw;
+  background: linear-gradient(
+    rgb(37, 37, 37),
+    rgba(37, 37, 37, 0.719),
+    rgba(39, 39, 39, 0.219),
+    rgba(39, 39, 39, 0.075),
+    rgba(39, 39, 39, 0.014)
+  );
+  z-index: 4;
+}
+
+.active {
+  display: flex;
+  height: 67px;
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
+  background: #111;
 }
 
 .right {
@@ -59,3 +76,9 @@ a:focus {
 span {
   margin-left: 18px;
 }
+
+/* .avi {
+  height: 3vw;
+  display: flex;
+  justify-content: flex-end;
+} */

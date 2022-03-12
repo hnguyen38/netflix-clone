@@ -1,10 +1,24 @@
 import { Link } from "react-router-dom";
 import classes from "./navigationbar.module.css";
 import logo from "../images/netflixlogo";
+import { useState } from "react";
+import avi from "../images/avatar.png";
 
 function NavigationBar() {
+  const [navbar, setNavbar] = useState(false);
+
+  function changeColor() {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", changeColor);
+
   return (
-    <div className={classes.container}>
+    <div className={navbar ? `${classes.active}` : `${classes.container}`}>
       <div>
         <span>
           <img src={logo} alt="Netflix" className={classes.logo} />
@@ -29,7 +43,7 @@ function NavigationBar() {
       </div>
       <div className={classes.right}>
         <span>Search bar</span>
-        <span>User Account</span>
+        <span>{/* <img className={classes.avi} src={avi} /> */} User</span>
       </div>
     </div>
   );

@@ -1,58 +1,82 @@
 .banner {
-  width: 100%;
+  width: 100vw;
   margin-top: -100px;
+  position: static;
+  z-index: 1;
 }
 
 .title {
-  color: white;
+  color: rgb(253, 253, 253);
   font-family: "Bebas Neue", cursive;
-  font-size: 50px;
+  font-weight: lighter;
+  font-size: 8vw;
+  position: static;
 }
 
 .overview {
   color: white;
-  font-size: 15px;
+  font-size: 1.3vw;
   font-weight: bolder;
-  width: 500px;
-  position: absolute;
-  margin-top: 70px;
+  position: static;
+  width: 40vw;
 }
 
 .infoContainer {
-  width: 30;
+  position: static;
   display: flex;
   flex-direction: column;
-  border: 5px solid black;
-  margin-top: -350px;
-  margin-bottom: 50px;
-  margin-left: 35px;
+  margin-top: -45vw;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  width: 60vw;
 }
 
 .buttons {
-  margin-top: 100px;
+  margin-top: 10px;
+  position: static;
+  margin-bottom: 50px;
+  width: fit-content;
+  z-index: 3;
 }
 
 .button {
-  margin-right: 8px;
+  margin-right: 14px;
   border: none;
   border-radius: 5px;
-  padding: 9px 25px;
-  font-size: 15px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  padding: 0.7vw 2vw;
+  font-size: 2vw;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bolder;
+  position: static;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: rgb(153, 153, 153);
+  background-color: rgba(201, 201, 201, 0.808);
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5px;
+  margin-bottom: 35px;
 }
 
 .fade {
-  position: absolute;
+  width: 100vw;
+  height: 15vw;
+  margin-top: -150px;
+  background: linear-gradient(
+    rgba(17, 17, 17, 0.014),
+    rgba(25, 25, 25, 0.323),
+    rgba(25, 25, 25, 0.726),
+    rgba(21, 21, 21),
+    rgb(19, 19, 19),
+    rgb(17, 17, 17)
+  );
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
 }
+
+/* */
