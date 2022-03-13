@@ -1,0 +1,71 @@
+.container {
+  position: static;
+  color: white;
+  background-color: rgb(17, 17, 17);
+  width: 950px;
+  margin: 0 auto;
+  padding-top: 120px;
+  margin-bottom: 50px;
+}
+.background {
+  background-color: rgb(17, 17, 17);
+}
+.iconsContainer {
+  position: static;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.icons {
+  height: 25px;
+  padding-right: 30px;
+}
+
+.icons:hover {
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  padding: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  color: rgb(156, 156, 156);
+}
+
+.service {
+  position: static;
+  border: 1px solid rgb(156, 156, 156);
+  width: 98px;
+  padding: 5px 8px;
+  margin-left: 30px;
+}
+
+.serviceText {
+  color: rgb(156, 156, 156);
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  position: static;
+  margin: 0 auto;
+}
+
+.text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.serviceText:hover {
+  color: white;
+  cursor: pointer;
+}

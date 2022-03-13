@@ -20,9 +20,11 @@ function NavigationBar() {
   return (
     <div className={navbar ? `${classes.active}` : `${classes.container}`}>
       <div>
-        <span>
-          <img src={logo} alt="Netflix" className={classes.logo} />
-        </span>
+        <Link to="/">
+          <span>
+            <img src={logo} alt="Netflix" className={classes.logo} />
+          </span>
+        </Link>
         <ul className={classes.header}>
           <li>
             <Link to="/">Home</Link>

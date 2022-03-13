@@ -43,11 +43,12 @@ a:focus {
   position: fixed;
   width: 100vw;
   background: linear-gradient(
+    to bottom,
     rgb(37, 37, 37),
     rgba(37, 37, 37, 0.719),
     rgba(39, 39, 39, 0.219),
     rgba(39, 39, 39, 0.075),
-    rgba(39, 39, 39, 0.014)
+    rgba(39, 39, 39, 0)
   );
   z-index: 4;
 }

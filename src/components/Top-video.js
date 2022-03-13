@@ -28,7 +28,7 @@ function TopVideo({ fetchURL }) {
   console.log(trailer);
   return (
     <div>
-      <div>
+      <div className={classes.imgFade}>
         <img
           key={trailer.id}
           className={classes.banner}
