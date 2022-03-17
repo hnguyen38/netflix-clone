@@ -11,6 +11,7 @@
   color: white;
   position: relative;
   z-index: 3;
+  display: block;
 }
 
 .moviesRow {
@@ -26,6 +27,19 @@
   display: none;
 }
 
+.small {
+  object-fit: contain;
+  height: 150px;
+  margin: 0 10px 0 10px;
+  transition: 450ms;
+  border-radius: 5px;
+}
+
+.small:hover {
+  transform: scale(1.09);
+  cursor: pointer;
+}
+
 .image {
   object-fit: contain;
   width: 167px;
@@ -37,6 +51,7 @@
 
 .image:hover {
   transform: scale(1.08);
+  cursor: pointer;
 }
 
 .button {
@@ -44,14 +59,14 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  height: 250px;
+  height: 150px;
   z-index: 5;
   margin-top: -270px;
 }
 
 .right,
 .left {
-  width: 50px;
+  width: 60px;
   font-family: "DM Sans", sans-serif;
   color: rgba(8, 8, 8, 0);
   font-size: 50px;

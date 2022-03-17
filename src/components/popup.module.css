@@ -1,0 +1,65 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  position: fixed;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  width: 900px;
+  height: 80%;
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  top: 5%;
+  background: rgb(31, 31, 31);
+  border-radius: 10px;
+}
+
+.trailer {
+  top: 0;
+}
+
+.exitDiv {
+  position: absolute;
+  z-index: 7;
+  width: fit-content;
+  display: block;
+  right: 0;
+  margin: -10px;
+}
+
+.exitButton {
+  color: rgb(255, 255, 255);
+  background: rgba(73, 73, 73, 0.664);
+  border: none;
+  font-size: 30px;
+  font-family: "Hubballi", cursive;
+  border-radius: 50%;
+  padding-bottom: 8px;
+  width: 35px;
+  height: 35px;
+}
+
+.exitButton:hover {
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+}
+
+.overview {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.spanDiv {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+}

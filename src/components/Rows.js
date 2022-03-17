@@ -1,12 +1,21 @@
 import classes from "./Rows.module.css";
 import axios from "../sources/axios";
 import { useState, useEffect } from "react";
+import YouTube from "react-youtube";
+import movieTrailer from "movie-trailer";
 
 const base_URL = "https://image.tmdb.org/t/p/original";
+const opts = {
+  width: "100%",
+  height: "600",
+  playerVars: {
+    autoplay: 1,
+  },
+};
 
-function Rows({ title, fetchURL }) {
+function Rows({ title, fetchURL, topRow }) {
   const [movies, setMovies] = useState([]);
-  const [arrows, setArrow] = useState(false);
+  const [trailerURL, setTrailerURL] = useState("");
 
   function rightArrow() {
     window.scrollTo({
@@ -26,23 +35,53 @@ function Rows({ title, fetchURL }) {
     fetchData();
   }, [fetchURL]);
 
+  const handleImgClick = (movie) => {
+    if (trailerURL) {
+      setTrailerURL(false);
+    } else {
+      movieTrailer(
+        movie.name ||
+          movie.title ||
+          movie.original_title ||
+          movie.original_name ||
+          ""
+      )
+        .then((url) => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerURL(urlParams.get("v"));
+          console.log(movie.name);
+        })
+        .catch((error) => console.log(error));
+    }
+  };
+
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>{title}</h3>
       <div className={classes.moviesRow}>
         {movies.map((movie) => (
-          <img
-            className={classes.image}
-            key={movie.id}
-            src={`${base_URL}${movie.poster_path}`}
-            alt={movie.name}
-          />
+          <div className={classes.moviesContainer}>
+            <img
+              className={`${classes.small} ${topRow && `${classes.image}`}`}
+              key={movie.id}
+              src={`${base_URL}${
+                topRow ? movie.poster_path : movie.backdrop_path
+              }`}
+              alt={movie.name}
+              onClick={() => {
+                handleImgClick(movie);
+              }}
+            />
+          </div>
         ))}
       </div>
-      <div className={classes.button}>
+      <div>
+        {trailerURL ? <YouTube videoId={trailerURL} opts={opts} /> : null}
+      </div>
+      {/* <div className={classes.button}>
         <button className={classes.left}>{`<`}</button>
         <button className={classes.right} onClick={rightArrow}>{`>`}</button>
-      </div>
+      </div> */}
     </div>
   );
 }
