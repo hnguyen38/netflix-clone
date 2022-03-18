@@ -9,7 +9,7 @@ function Homepage() {
         <TopVideo fetchURL={requests.fetchTrending} />
       </div>
       <div>
-        <Rows title="Trending Now" fetchURL={requests.fetchTrending} topRow />
+        <Rows title="Trending Now" fetchURL={requests.fetchTrending} />
         <Rows title="Top Rated" fetchURL={requests.fetchTopRated} />
         <Rows title="Action" fetchURL={requests.fetchActionMovies} />
         <Rows title="Documentaries" fetchURL={requests.fetchDocumantaries} />

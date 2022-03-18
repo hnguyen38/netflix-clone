@@ -1,9 +1,9 @@
 .title {
   color: white;
-  margin-top: 15px;
+  margin-top: 50px;
   padding-left: 60px;
-  margin-bottom: -10px;
-  font-size: 1.5vw;
+  margin-bottom: 0px;
+  font-size: 25px;
   color: rgb(238, 238, 238);
 }
 
@@ -11,7 +11,6 @@
   color: white;
   position: relative;
   z-index: 3;
-  display: block;
 }
 
 .moviesRow {
@@ -21,6 +20,8 @@
   overflow-x: scroll;
   padding: 20px;
   margin-left: 30px;
+  margin-bottom: 30px;
+  scroll-behavior: smooth;
 }
 
 .moviesRow::-webkit-scrollbar {
@@ -30,7 +31,7 @@
 .small {
   object-fit: contain;
   height: 150px;
-  margin: 0 10px 0 10px;
+  margin: 0 5px 0 5px;
   transition: 450ms;
   border-radius: 5px;
 }
@@ -42,9 +43,8 @@
 
 .image {
   object-fit: contain;
-  width: 167px;
   height: 250px;
-  margin: 0 10px 0 10px;
+  margin: 0 5px 120px 5px;
   transition: 450ms;
   border-radius: 5px;
 }
@@ -56,28 +56,47 @@
 
 .button {
   position: static;
+  width: 100%;
+  height: 155px;
+  margin-top: -205px;
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-  height: 150px;
-  z-index: 5;
-  margin-top: -270px;
 }
 
 .right,
 .left {
-  width: 60px;
+  width: 50px;
+  height: 150px;
   font-family: "DM Sans", sans-serif;
   color: rgba(8, 8, 8, 0);
-  font-size: 50px;
-  background: none;
+  font-size: 60px;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
-  border-radius: 5px;
+  z-index: 8;
 }
 
 .right:hover,
 .left:hover {
-  background: rgba(0, 0, 0, 0.205);
+  background: rgba(0, 0, 0, 0.24);
   color: white;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.topButton {
+  position: static;
+  width: 100%;
+  height: 150px;
+  margin-top: -275px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topRightButton,
+.topLeftButton {
+  width: 50px;
+  height: 250px;
+  font-family: "DM Sans", sans-serif;
+  color: rgba(8, 8, 8, 0);
+  background-color: rgba(0, 0, 0, 0);
 }

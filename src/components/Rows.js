@@ -1,6 +1,6 @@
 import classes from "./Rows.module.css";
 import axios from "../sources/axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 
@@ -8,6 +8,7 @@ const base_URL = "https://image.tmdb.org/t/p/original";
 const opts = {
   width: "100%",
   height: "600",
+
   playerVars: {
     autoplay: 1,
   },
@@ -16,14 +17,8 @@ const opts = {
 function Rows({ title, fetchURL, topRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerURL, setTrailerURL] = useState("");
+  const moviesRef = useRef(0);
 
-  function rightArrow() {
-    window.scrollTo({
-      right: 100,
-      behavior: "smooth",
-    });
-  }
-  window.addEventListener("click", rightArrow);
   //if any variable is being passed from outside block (fetchURL) you HAVE TO put it as a dependency bc function is now dependent on fetchURL
   //URL may change so useEffect will run again DEPENDING on fetchURL (?)
   useEffect(() => {
@@ -55,10 +50,14 @@ function Rows({ title, fetchURL, topRow }) {
     }
   };
 
+  const scroll = (scrollOffset) => {
+    moviesRef.current.scrollLeft += scrollOffset;
+  };
+
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>{title}</h3>
-      <div className={classes.moviesRow}>
+      <div ref={moviesRef} className={classes.moviesRow}>
         {movies.map((movie) => (
           <div className={classes.moviesContainer}>
             <img
@@ -78,10 +77,20 @@ function Rows({ title, fetchURL, topRow }) {
       <div>
         {trailerURL ? <YouTube videoId={trailerURL} opts={opts} /> : null}
       </div>
-      {/* <div className={classes.button}>
-        <button className={classes.left}>{`<`}</button>
-        <button className={classes.right} onClick={rightArrow}>{`>`}</button>
-      </div> */}
+      <div className={`${classes.button} ${topRow && `${classes.topButton}`}`}>
+        <button
+          className={`
+            ${classes.left}
+            ${topRow && `${classes.topLeftButton}`}`}
+          onClick={() => scroll(-900)}
+        >{`<`}</button>
+        <button
+          className={`${classes.right} ${
+            topRow && `${classes.topRightButton}`
+          }`}
+          onClick={() => scroll(900)}
+        >{`>`}</button>
+      </div>
     </div>
   );
 }

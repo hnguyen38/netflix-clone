@@ -1,8 +1,10 @@
 .pageTitle {
   color: white;
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5vw;
+  font-size: 25px;
   position: relative;
   padding-bottom: 10px;
   display: inline;
+  width: fit-content;
+  min-width: 135px;
 }

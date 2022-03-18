@@ -1,6 +1,6 @@
 import classes from "./nap.module.css";
 import requests from "../sources/Requests";
-import TopVideo from "../components/Top-video";
+
 import Rows from "../components/Rows";
 
 function NapPage() {

@@ -15,25 +15,26 @@
   color: rgb(253, 253, 253);
   font-family: "Bebas Neue", cursive;
   font-weight: lighter;
-  font-size: 8vw;
-  position: static;
+  font-size: 80px;
+  position: relative;
+  min-width: 700px;
 }
 
 .overview {
   color: white;
-  font-size: calc(1px + 1.5vw);
+  font-size: 23px;
   font-weight: bolder;
   position: static;
-  max-width: 40vw;
-  min-width: 350px;
+  width: 40vw;
+  min-width: 550px;
 }
 
 .infoContainer {
   position: static;
   display: flex;
   flex-direction: column;
-  margin-top: -45vw;
-  margin-bottom: 80px;
+  margin-top: -40vw;
+  margin-bottom: 100px;
   margin-left: 60px;
   width: 60vw;
 }
@@ -43,6 +44,7 @@
   position: static;
   margin-bottom: 50px;
   width: fit-content;
+  min-width: 295px;
   z-index: 3;
 }
 
@@ -51,7 +53,7 @@
   border: none;
   border-radius: 5px;
   padding: 0.7vw 2vw;
-  font-size: 2vw;
+  font-size: 25px;
   font-family: "DM Sans", sans-serif;
   font-weight: bolder;
   position: static;
@@ -76,6 +78,7 @@
     rgba(17, 17, 17, 0.014),
     rgba(25, 25, 25, 0.323),
     rgba(25, 25, 25, 0.726),
+    rgba(21, 21, 21),
     rgba(21, 21, 21),
     rgb(19, 19, 19),
     rgb(17, 17, 17)
