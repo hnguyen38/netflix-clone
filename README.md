@@ -1,6 +1,6 @@
 # Netflix Clone
 
-This Netflix Clone uses The Movie Database (https://www.themoviedb.org/?language=en-US) as an API for movie/TV show information. Postman (https://web.postman.co/) is used to get an API key. Youtube and Movietrailer packages were used to retrieve and search for trailers with given title.
+This Netflix Clone uses The Movie Database (https://www.themoviedb.org/?language=en-US) as an API for movie/TV show information. Postman (https://web.postman.co/) is used to get an API key. Youtube and Movietrailer packages were used to retrieve and search for trailers with given title. This was made using React.js, HTML, and CSS.
 
 ### Features
 
