@@ -28,7 +28,7 @@
   display: none;
 }
 
-.small {
+.image {
   object-fit: contain;
   height: 150px;
   margin: 0 5px 0 5px;
@@ -36,23 +36,10 @@
   border-radius: 5px;
 }
 
-.small:hover {
+.image:hover {
   transform: scale(1.09);
   cursor: pointer;
 }
-
-/* .image {
-  object-fit: contain;
-  height: 250px;
-  margin: 0 5px 120px 5px;
-  transition: 450ms;
-  border-radius: 5px;
-}
-
-.image:hover {
-  transform: scale(1.08);
-  cursor: pointer;
-} */
 
 .button {
   position: static;
@@ -83,20 +70,6 @@
   border-radius: 5px;
 }
 
-/* .topButton {
-  position: static;
-  width: 100%;
-  height: 150px;
-  margin-top: -275px;
-  display: flex;
-  justify-content: space-between;
+.hide {
+  visibility: hidden;
 }
-
-.topRightButton,
-.topLeftButton {
-  width: 50px;
-  height: 250px;
-  font-family: "DM Sans", sans-serif;
-  color: rgba(8, 8, 8, 0);
-  background-color: rgba(0, 0, 0, 0);
-} */

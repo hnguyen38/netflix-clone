@@ -99,6 +99,7 @@ function TopVideo({ fetchURL, pageTitle }) {
           </button>
         </div>
       </div>
+      <div className={classes.overlay}></div>
       <div>
         {popup ? (
           <Popup

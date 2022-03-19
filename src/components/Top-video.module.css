@@ -1,61 +1,86 @@
-.container {
-  width: 100vw;
-  min-width: 800px;
-}
-
 .banner {
   width: 100vw;
-  min-width: 800px;
-  margin-top: -100px;
-  position: static;
+  min-width: 1400px;
+  position: relative;
   z-index: 1;
 }
 
+.fade {
+  height: 9em;
+  width: 100%;
+  min-width: 1400px;
+  background: linear-gradient(
+    rgba(17, 17, 17, 0.014),
+    rgba(25, 25, 25, 0.323),
+    rgba(25, 25, 25, 0.726),
+    rgba(21, 21, 21),
+    rgba(21, 21, 21),
+    rgb(19, 19, 19),
+    rgb(17, 17, 17)
+  );
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+}
+
+/* img and bottom fade */
+.imgFade {
+  position: absolute;
+  display: flex;
+  align-items: column;
+  top: 0;
+  z-index: 1;
+}
+
+/* entire HTML/JSX */
+.container {
+  width: 100%;
+  min-width: 1400px;
+  height: 500px;
+}
+
+/* container for pagetitle, .header, & .buttons */
+.infoContainer {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-left: 60px;
+  margin-top: 200px;
+  padding: 20px;
+}
+
+/* container for trailer title & overview */
+.header {
+  margin-bottom: 20px;
+}
+
+/* trailer title */
 .title {
-  color: rgb(253, 253, 253);
+  color: white;
   font-family: "Bebas Neue", cursive;
   font-weight: lighter;
-  font-size: 80px;
-  position: relative;
-  min-width: 700px;
-  text-shadow: 1px 1px black;
+  font-size: 100px;
+  min-width: 900px;
 }
 
 .overview {
   color: white;
   font-size: 23px;
   font-weight: bolder;
-  position: static;
-  width: 40vw;
-  min-width: 550px;
-  text-shadow: 1px 1px rgb(110, 110, 110);
-}
-
-.infoContainer {
-  position: absolute;
-  top: 10%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0px;
-  margin-bottom: 0;
-  margin-left: 60px;
-  width: 60vw;
 }
 
 .buttons {
   margin-top: 10px;
-  position: static;
   margin-bottom: 50px;
-  width: fit-content;
-  min-width: 295px;
-  z-index: 3;
 }
 
 .button {
   margin-right: 14px;
   border: none;
   border-radius: 5px;
-  padding: 0.7vw 2vw;
+  padding: 10px 20px;
   font-size: 25px;
   font-family: "DM Sans", sans-serif;
   font-weight: bolder;
@@ -67,27 +92,12 @@
   background-color: rgba(201, 201, 201, 0.808);
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.fade {
-  height: 9em;
-  width: 100vw;
-  margin-top: -140px;
-  background: linear-gradient(
-    rgba(17, 17, 17, 0.014),
-    rgba(25, 25, 25, 0.323),
-    rgba(25, 25, 25, 0.726),
-    rgba(21, 21, 21),
-    rgba(21, 21, 21),
-    rgb(19, 19, 19),
-    rgb(17, 17, 17)
-  );
-  position: relative;
-  display: flex;
-  align-items: flex-end;
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.342);
+  top: 0;
   z-index: 2;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.342);
 }

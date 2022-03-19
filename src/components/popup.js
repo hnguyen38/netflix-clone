@@ -2,7 +2,7 @@ import classes from "./popup.module.css";
 
 function Popup({ trailer, overview, exitPopup }) {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} onClick={exitPopup}>
       <div className={classes.container}>
         <div className={classes.exitDiv}>
           <button onClick={exitPopup} className={classes.exitButton}>

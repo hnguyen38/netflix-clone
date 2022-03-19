@@ -17,6 +17,7 @@ const opts = {
 function Rows({ title, fetchURL, topRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerURL, setTrailerURL] = useState("");
+
   const moviesRef = useRef(0);
 
   //if any variable is being passed from outside block (fetchURL) you HAVE TO put it as a dependency bc function is now dependent on fetchURL
@@ -61,7 +62,7 @@ function Rows({ title, fetchURL, topRow }) {
         {movies.map((movie) => (
           <div className={classes.moviesContainer}>
             <img
-              className={`${classes.small} ${topRow && `${classes.image}`}`}
+              className={classes.image}
               key={movie.id}
               src={`${base_URL}${
                 topRow ? movie.poster_path : movie.backdrop_path
@@ -77,17 +78,13 @@ function Rows({ title, fetchURL, topRow }) {
       <div>
         {trailerURL ? <YouTube videoId={trailerURL} opts={opts} /> : null}
       </div>
-      <div className={`${classes.button} ${topRow && `${classes.topButton}`}`}>
+      <div className={classes.button}>
         <button
-          className={`
-            ${classes.left}
-            ${topRow && `${classes.topLeftButton}`}`}
+          className={classes.left}
           onClick={() => scroll(-900)}
         >{`<`}</button>
         <button
-          className={`${classes.right} ${
-            topRow && `${classes.topRightButton}`
-          }`}
+          className={classes.right}
           onClick={() => scroll(900)}
         >{`>`}</button>
       </div>

@@ -7,6 +7,7 @@ import avi from "../images/avatar.png";
 function NavigationBar() {
   const [navbar, setNavbar] = useState(false);
 
+  //stack overflow code
   function changeColor() {
     if (window.scrollY >= 80) {
       setNavbar(true);
@@ -44,8 +45,10 @@ function NavigationBar() {
         </ul>
       </div>
       <div className={classes.right}>
-        <span>Search bar</span>
-        <span>{/* <img className={classes.avi} src={avi} /> */} User</span>
+        <span>
+          <img className={classes.avi} src={avi} />{" "}
+          <p className={classes.arrow}>&#9660;</p>
+        </span>
       </div>
     </div>
   );

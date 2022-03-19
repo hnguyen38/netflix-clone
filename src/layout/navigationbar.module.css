@@ -42,6 +42,7 @@ a:focus {
   height: 67px;
   position: fixed;
   width: 100vw;
+  min-width: 750px;
   background: linear-gradient(
     to bottom,
     rgb(37, 37, 37),
@@ -51,6 +52,7 @@ a:focus {
     rgba(39, 39, 39, 0)
   );
   z-index: 4;
+  transition: 500ms;
 }
 
 .active {
@@ -58,10 +60,13 @@ a:focus {
   height: 67px;
   position: fixed;
   width: 100vw;
+  min-width: 750px;
   z-index: 5;
   background: #111;
+  transition: 450ms;
 }
 
+/* code for search bar and avi
 .right {
   margin-left: auto;
   align-items: space-between;
@@ -71,15 +76,30 @@ a:focus {
   color: rgb(202, 200, 200);
   margin-top: 25px;
   margin-right: 30px;
-}
+} */
 
 /*CHANGE THIS LATER WHEN ADD COMPONENTS */
+
 span {
   margin-left: 18px;
 }
 
-/* .avi {
-  height: 3vw;
-  display: flex;
-  justify-content: flex-end;
-} */
+.arrow {
+  color: white;
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  font-size: 10px;
+  border-radius: 5px;
+}
+.avi {
+  position: absolute;
+  top: 20px;
+  right: 95px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.avi:hover {
+  cursor: pointer;
+}

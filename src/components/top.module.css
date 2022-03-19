@@ -1,0 +1,93 @@
+.container {
+  width: 100vw;
+  min-width: 800px;
+}
+
+.banner {
+  width: 100vw;
+  min-width: 800px;
+  margin-top: -100px;
+  position: static;
+  z-index: 1;
+}
+
+.title {
+  color: rgb(253, 253, 253);
+  font-family: "Bebas Neue", cursive;
+  font-weight: lighter;
+  font-size: 80px;
+  position: relative;
+  min-width: 700px;
+  text-shadow: 1px 1px black;
+}
+
+.overview {
+  color: white;
+  font-size: 23px;
+  font-weight: bolder;
+  position: static;
+  width: 40vw;
+  min-width: 550px;
+  text-shadow: 1px 1px rgb(110, 110, 110);
+}
+
+.infoContainer {
+  position: static;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -800px;
+  margin-bottom: 50px;
+  margin-left: 60px;
+  width: 60vw;
+}
+
+.buttons {
+  margin-top: 10px;
+  position: static;
+  margin-bottom: 50px;
+  width: fit-content;
+  min-width: 295px;
+  z-index: 3;
+}
+
+.button {
+  margin-right: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7vw 2vw;
+  font-size: 25px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bolder;
+  position: static;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgba(201, 201, 201, 0.808);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.fade {
+  height: 9em;
+  width: 100vw;
+  margin-top: -140px;
+  background: linear-gradient(
+    rgba(17, 17, 17, 0.014),
+    rgba(25, 25, 25, 0.323),
+    rgba(25, 25, 25, 0.726),
+    rgba(21, 21, 21),
+    rgba(21, 21, 21),
+    rgb(19, 19, 19),
+    rgb(17, 17, 17)
+  );
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
