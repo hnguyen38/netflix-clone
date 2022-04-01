@@ -17,6 +17,7 @@ const opts = {
 function Rows({ title, fetchURL, topRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerURL, setTrailerURL] = useState("");
+  const [leftButton, setButton] = useState(false);
 
   const moviesRef = useRef(0);
 
@@ -80,12 +81,16 @@ function Rows({ title, fetchURL, topRow }) {
       </div>
       <div className={classes.button}>
         <button
-          className={classes.left}
+          className={leftButton ? `${classes.left}` : `${classes.hide}`}
           onClick={() => scroll(-900)}
         >{`<`}</button>
+
         <button
           className={classes.right}
-          onClick={() => scroll(900)}
+          onClick={() => {
+            scroll(900);
+            setButton(true);
+          }}
         >{`>`}</button>
       </div>
     </div>
