@@ -30,4 +30,4 @@ This project uses Yarn.
 
 ### Project Status
 
-Developement has completely stopped for now. Going back to this, I would find another way to get movie trailers because some do not link to the correct trailer of the given show.
+Completed.

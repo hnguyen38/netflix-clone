@@ -14,7 +14,7 @@ const opts = {
   },
 };
 
-function Rows({ title, fetchURL, topRow }) {
+function Rows({ title, fetchURL, topRow, key }) {
   const [movies, setMovies] = useState([]);
   const [trailerURL, setTrailerURL] = useState("");
   const [leftButton, setButton] = useState(false);
@@ -61,19 +61,17 @@ function Rows({ title, fetchURL, topRow }) {
       <h3 className={classes.title}>{title}</h3>
       <div ref={moviesRef} className={classes.moviesRow}>
         {movies.map((movie) => (
-          <div className={classes.moviesContainer}>
-            <img
-              className={classes.image}
-              key={movie.id}
-              src={`${base_URL}${
-                topRow ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt={movie.name}
-              onClick={() => {
-                handleImgClick(movie);
-              }}
-            />
-          </div>
+          <img
+            className={classes.image}
+            key={movie.id}
+            src={`${base_URL}${
+              topRow ? movie.poster_path : movie.backdrop_path
+            }`}
+            alt={movie.name}
+            onClick={() => {
+              handleImgClick(movie);
+            }}
+          />
         ))}
       </div>
       <div>
